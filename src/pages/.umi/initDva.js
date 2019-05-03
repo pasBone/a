@@ -15,9 +15,7 @@ app.use(createLoading());
 });
 
 app.model({ namespace: 'global', ...(require('/Users/bone/develop/antdesign-pro/src/models/global.js').default) });
-app.model({ namespace: 'list', ...(require('/Users/bone/develop/antdesign-pro/src/models/list.js').default) });
 app.model({ namespace: 'login', ...(require('/Users/bone/develop/antdesign-pro/src/models/login.js').default) });
 app.model({ namespace: 'menu', ...(require('/Users/bone/develop/antdesign-pro/src/models/menu.js').default) });
-app.model({ namespace: 'project', ...(require('/Users/bone/develop/antdesign-pro/src/models/project.js').default) });
 app.model({ namespace: 'setting', ...(require('/Users/bone/develop/antdesign-pro/src/models/setting.js').default) });
 app.model({ namespace: 'user', ...(require('/Users/bone/develop/antdesign-pro/src/models/user.js').default) });
