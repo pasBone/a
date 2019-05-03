@@ -33,10 +33,7 @@ let routes = [
         "path": "/user/login",
         "name": "login",
         "component": _dvaDynamic({
-  app: window.g_app,
-models: () => [
-  import(/* webpackChunkName: 'p__User__models__register.js' */'/Users/bone/develop/antdesign-pro/src/pages/User/models/register.js').then(m => { return { namespace: 'register',...m.default}})
-],
+  
   component: () => import(/* webpackChunkName: "p__User__Login" */'../User/Login'),
   LoadingComponent: require('/Users/bone/develop/antdesign-pro/src/components/PageLoading/index').default,
 }),
@@ -46,10 +43,7 @@ models: () => [
         "path": "/user/register",
         "name": "register",
         "component": _dvaDynamic({
-  app: window.g_app,
-models: () => [
-  import(/* webpackChunkName: 'p__User__models__register.js' */'/Users/bone/develop/antdesign-pro/src/pages/User/models/register.js').then(m => { return { namespace: 'register',...m.default}})
-],
+  
   component: () => import(/* webpackChunkName: "p__User__Register" */'../User/Register'),
   LoadingComponent: require('/Users/bone/develop/antdesign-pro/src/components/PageLoading/index').default,
 }),
@@ -59,10 +53,7 @@ models: () => [
         "path": "/user/register-result",
         "name": "register.result",
         "component": _dvaDynamic({
-  app: window.g_app,
-models: () => [
-  import(/* webpackChunkName: 'p__User__models__register.js' */'/Users/bone/develop/antdesign-pro/src/pages/User/models/register.js').then(m => { return { namespace: 'register',...m.default}})
-],
+  
   component: () => import(/* webpackChunkName: "p__User__RegisterResult" */'../User/RegisterResult'),
   LoadingComponent: require('/Users/bone/develop/antdesign-pro/src/components/PageLoading/index').default,
 }),
