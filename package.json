@@ -78,7 +78,11 @@
     "resize-observer-polyfill": "^1.5.1",
     "umi": "^2.4.4",
     "umi-plugin-react": "^1.7.2",
-    "umi-request": "^1.0.5"
+    "umi-request": "^1.0.5",
+    "redux": "^3.7.2",
+    "redux-actions": "^2.3.2",
+    "redux-saga": "^0.16.0",
+    "reselect": "^3.0.1"
   },
   "devDependencies": {
     "@types/history": "^4.7.2",

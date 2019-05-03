@@ -12,65 +12,10 @@ let routes = [
     "path": "/login",
     "component": _dvaDynamic({
   
-  component: () => import(/* webpackChunkName: "p__Login" */'../Login'),
+  component: () => import(/* webpackChunkName: "p__Login__Login" */'../Login/Login'),
   LoadingComponent: require('/Users/bone/develop/antdesign-pro/src/components/PageLoading/index').default,
 }),
     "exact": true
-  },
-  {
-    "path": "/user",
-    "component": _dvaDynamic({
-  
-  component: () => import(/* webpackChunkName: "layouts__UserLayout" */'../../layouts/UserLayout'),
-  LoadingComponent: require('/Users/bone/develop/antdesign-pro/src/components/PageLoading/index').default,
-}),
-    "routes": [
-      {
-        "path": "/user",
-        "exact": true
-      },
-      {
-        "path": "/user/login",
-        "name": "login",
-        "component": _dvaDynamic({
-  
-  component: () => import(/* webpackChunkName: "p__User__Login" */'../User/Login'),
-  LoadingComponent: require('/Users/bone/develop/antdesign-pro/src/components/PageLoading/index').default,
-}),
-        "exact": true
-      },
-      {
-        "path": "/user/register",
-        "name": "register",
-        "component": _dvaDynamic({
-  
-  component: () => import(/* webpackChunkName: "p__User__Register" */'../User/Register'),
-  LoadingComponent: require('/Users/bone/develop/antdesign-pro/src/components/PageLoading/index').default,
-}),
-        "exact": true
-      },
-      {
-        "path": "/user/register-result",
-        "name": "register.result",
-        "component": _dvaDynamic({
-  
-  component: () => import(/* webpackChunkName: "p__User__RegisterResult" */'../User/RegisterResult'),
-  LoadingComponent: require('/Users/bone/develop/antdesign-pro/src/components/PageLoading/index').default,
-}),
-        "exact": true
-      },
-      {
-        "component": _dvaDynamic({
-  
-  component: () => import(/* webpackChunkName: "p__404" */'../404'),
-  LoadingComponent: require('/Users/bone/develop/antdesign-pro/src/components/PageLoading/index').default,
-}),
-        "exact": true
-      },
-      {
-        "component": () => React.createElement(require('/Users/bone/develop/antdesign-pro/node_modules/umi-build-dev/lib/plugins/404/NotFound.js').default, { pagesPath: 'src/pages', hasRoutesInConfig: true })
-      }
-    ]
   },
   {
     "path": "/",
@@ -83,7 +28,13 @@ let routes = [
     "routes": [
       {
         "path": "/",
-        "redirect": "/form",
+        "redirect": "/dashboard/overview",
+        "exact": true
+      },
+      {
+        "path": "/dashboard",
+        "icon": "form",
+        "name": "数据统计",
         "exact": true
       },
       {

@@ -1,26 +1,16 @@
+/*
+ * @Author: xiaojun.xiong
+ * @Date: 2019-05-03 17:44:03
+ * @Last Modified by: xiaojun.xiong
+ * @Last Modified time: 2019-05-03 23:01:43
+ */
 export default [
-  // user
+  // userLogin
   {
     path: '/login',
-    component: './Login',
+    component: './Login/Login'
   },
-  {
-    path: '/user',
-    component: '../layouts/UserLayout',
-    routes: [
-      { path: '/user' },
-      { path: '/user/login', name: 'login', component: './User/Login' },
-      { path: '/user/register', name: 'register', component: './User/Register' },
-      {
-        path: '/user/register-result',
-        name: 'register.result',
-        component: './User/RegisterResult',
-      },
-      {
-        component: '404',
-      },
-    ],
-  },
+
   // app
   {
     path: '/',
@@ -29,7 +19,19 @@ export default [
     routes: [
       // dashboard
       // { path: '/', redirect: '/dashboard/analysis', authority: ['admin', 'user'] },
-      { path: '/', redirect: '/form' },
+      { path: '/', redirect: '/dashboard/overview' },
+      {
+        path: '/dashboard',
+        icon: 'form',
+        name: '数据统计',
+        // routes: [
+        //   {
+        //     path: '/dashboard/overview',
+        //     name: '数据总览',
+        //     component: './Dashboard/Overview'
+        //   }
+        // ]
+      },
       // forms
       {
         path: '/form',
@@ -39,7 +41,7 @@ export default [
           {
             path: '/form/basic-form',
             name: 'basicform',
-            component: './Forms/BasicForm',
+            component: './Forms/BasicForm'
           },
           {
             path: '/form/step-form',
@@ -49,36 +51,36 @@ export default [
             routes: [
               {
                 path: '/form/step-form',
-                redirect: '/form/step-form/info',
+                redirect: '/form/step-form/info'
               },
               {
                 path: '/form/step-form/info',
                 name: 'info',
-                component: './Forms/StepForm/Step1',
+                component: './Forms/StepForm/Step1'
               },
               {
                 path: '/form/step-form/confirm',
                 name: 'confirm',
-                component: './Forms/StepForm/Step2',
+                component: './Forms/StepForm/Step2'
               },
               {
                 path: '/form/step-form/result',
                 name: 'result',
-                component: './Forms/StepForm/Step3',
-              },
-            ],
+                component: './Forms/StepForm/Step3'
+              }
+            ]
           },
           {
             path: '/form/advanced-form',
             name: 'advancedform',
             authority: ['admin'],
-            component: './Forms/AdvancedForm',
-          },
-        ],
+            component: './Forms/AdvancedForm'
+          }
+        ]
       },
       {
-        component: '404',
-      },
-    ],
-  },
-];
+        component: '404'
+      }
+    ]
+  }
+]
